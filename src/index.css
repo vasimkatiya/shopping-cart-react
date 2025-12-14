@@ -1,0 +1,112 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+}
+
+.shop-now{
+    margin-top: 15px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    border: none;
+    background-color: red;
+    font-weight: 650;
+    cursor: pointer;
+    border-radius: 25px;
+    align-items: center;
+}
+
+.dif-welcome{
+     background: red;
+    color: rgb(255, 255, 255);
+}
+
+.logo{
+    display: flex;
+}
+
+.dif-font{
+    /* color: black; */
+    background-color: red;
+}
+
+.logo{
+    height: auto;
+}
+
+.home-content{
+    color: black;
+    position: absolute;
+    top: 400px;
+    left: 30%;
+    background-color: rgb(34, 30, 34);
+    text-align: center;
+    padding: 50px;
+    border-radius: 15px;
+    /* background-color: aqua; */
+}
+
+.home-banner{
+    height: 775px;
+    width: 100%;
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.home-content{
+    text-transform: capitalize;
+    color: white;
+}
+
+h2{
+    width: 550px;
+}
+
+nav {
+    color: white;
+    display: flex;
+    gap: 50px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 19px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav-con{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.navbar{
+    height: 60px;
+    width: 95%;
+    background-color: rgb(50, 47, 47);
+    display: flex;
+    align-items: center;
+    padding: 0 220px;
+    border-radius: 35px;
+    justify-content: space-between;
+}
+
