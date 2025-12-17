@@ -4,19 +4,16 @@ import Product from "./pages/Product";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
-// import Footer from "./components/Footer"
 
 const App = () => {
-  // useState
   const [Data, setData] = useState([]);
   const [erro, setErro] = useState(null);
   const [Loading, setLoading] = useState(true);
-  //cart useStates
-
-  const [Cart, setCart] = useState([]);
+  const [cart, setCart] = useState([]);
+  
   return (
     <>
-      <Navbar Cart={Cart} />
+      <Navbar Cart={cart} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -34,13 +31,9 @@ const App = () => {
             />
           }
         />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart Cart={cart} setCart={setCart}/>} />
       </Routes>
-      {/* <div className="home">
-      <div className="home-container">
-        <img className="home-banner" src="/src/homebanner2.jpg" alt="" />
-      </div>
-    </div> */}
+      
     </>
   );
 };

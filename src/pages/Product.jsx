@@ -13,18 +13,24 @@ const Product = ({Data,setData,erro,setErro,Loading,setLoading,Cart,setCart}) =>
 
   function addToCart(product)
   {
-    // const newCart = Cart.filter((cart)=>cart.id !== product.id);
-    const Exist = Cart.find((item)=>item.id == product.id);
-
-    if(!Exist){
-
-      setCart(prev=>[...prev,product])
-    }
-    console.log("product ",product);
+    setCart(prevCart=>{
+      const exist = prevCart.find((item)=> item.id === product.id);
+      if(exist) 
+      {
+        return prevCart.map((item)=>
+        item.id === product.id ? {...item,quantity:item.quantity+1}
+        :item
+        );
+      }
+      else{
+        return [...prevCart,{...product,quantity:1}]
+      }
+    })  
+  }
+    // console.log("product ",product);
     
     // console.log("cart ",Cart);
-    
-  }
+  
 
   useEffect(() => {
    console.log("cart update",Cart);
@@ -59,8 +65,6 @@ const Product = ({Data,setData,erro,setErro,Loading,setLoading,Cart,setCart}) =>
     fetchData();
     }, []);
     
-
-
 
 
   return (
