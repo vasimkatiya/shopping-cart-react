@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {ShoppingCart} from 'lucide-react'
 
-const Navbar = () => {
+const Navbar = ({Cart}) => {
   return (
     <div className="nav-con">
 
@@ -13,7 +13,7 @@ const Navbar = () => {
         <nav>
             <Link className='nav-link' style={{color:'white'}} to='/'>home</Link>
             <Link className='nav-link' style={{color:'white'}} to='/product'>products</Link>
-            <Link className='nav-link' style={{color:'white'}} to='/cart' ><span><ShoppingCart /></span>cart</Link>
+            <Link className='nav-link' style={{color:'white'}} to='/cart' ><span><ShoppingCart /></span>cart</Link> <span className='cir'>{Cart.length}</span>
         </nav>
     </div>
     </div>

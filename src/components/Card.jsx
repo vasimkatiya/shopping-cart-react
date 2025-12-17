@@ -1,6 +1,12 @@
-import React from 'react'
+// import React, { useState } from 'react'
 
-const Card = ({img,name,price}) => {
+const Card = ({img,name,price,id,addToCart}) => {
+    
+    // const clickHandler = (e) =>{
+    //     console.log('hello');
+        
+        
+    // }
   return (
     <>
     <div className="item-card">
@@ -8,12 +14,14 @@ const Card = ({img,name,price}) => {
             <img src={img} alt="" />
         </div>
         <div className="item-name">
-            <h2>{name} </h2>
+            <h2>{id} </h2>
         </div>
         <div className="item-price">
             <h3>${price} </h3>
         </div>
-        <button className="add-cart-btn">
+        <button className="add-cart-btn" onClick={()=>{
+            addToCart({img,id,price})
+        }}>
             add to cart
         </button>
     </div>

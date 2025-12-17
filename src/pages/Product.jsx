@@ -3,10 +3,34 @@ import Card from '../components/Card'
 // import useData from '../customHook/DataHook'
 // import { data } from 'react-router-dom';
 
-const Product = () => {
-    const [Data, setData] = useState([]);
-    const [erro, setErro] = useState(null);
-    const [Loading, setLoading] = useState(true);
+const Product = ({Data,setData,erro,setErro,Loading,setLoading,Cart,setCart}) => {
+    // const [Data, setData] = useState([]);
+    // const [erro, setErro] = useState(null);
+    // const [Loading, setLoading] = useState(true);
+  // const [Cart, setCart] = useState([]);
+
+  //add to cart function //
+
+  function addToCart(product)
+  {
+    // const newCart = Cart.filter((cart)=>cart.id !== product.id);
+    const Exist = Cart.find((item)=>item.id == product.id);
+
+    if(!Exist){
+
+      setCart(prev=>[...prev,product])
+    }
+    console.log("product ",product);
+    
+    // console.log("cart ",Cart);
+    
+  }
+
+  useEffect(() => {
+   console.log("cart update",Cart);
+   
+  }, [Cart])
+  
 
      useEffect(() => {
         const fetchData = async () =>{
@@ -42,12 +66,12 @@ const Product = () => {
   return (
     <>
     <div className="product-con">
-      {Loading && <h2>Loading...</h2> }
+      {Loading && <h2 className='loading'>Loading...</h2> }
       {erro && <h2>{erro.message}</h2> }
 
      {Data.length > 0 && 
      Data.map((ele)=>{
-      return <Card key={ele.id} name={ele.title} price={ele.price} img={ele.image} />
+      return <Card key={ele.id} price={ele.price} id={ele.id} addToCart={addToCart} img={ele.image} />
      })}
 
     </div>
