@@ -1,15 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, } from 'react'
 import Card from '../components/Card'
-// import useData from '../customHook/DataHook'
-// import { data } from 'react-router-dom';
 
 const Product = ({Data,setData,erro,setErro,Loading,setLoading,Cart,setCart}) => {
-    // const [Data, setData] = useState([]);
-    // const [erro, setErro] = useState(null);
-    // const [Loading, setLoading] = useState(true);
-  // const [Cart, setCart] = useState([]);
-
-  //add to cart function //
 
   function addToCart(product)
   {
@@ -27,10 +19,6 @@ const Product = ({Data,setData,erro,setErro,Loading,setLoading,Cart,setCart}) =>
       }
     })  
   }
-    // console.log("product ",product);
-    
-    // console.log("cart ",Cart);
-  
 
   useEffect(() => {
    console.log("cart update",Cart);

@@ -1,12 +1,7 @@
-// import React, { useState } from 'react'
 
-const Card = ({img,name,price,id,addToCart}) => {
+const Card = ({img,price,id,addToCart}) => {
     
-    // const clickHandler = (e) =>{
-    //     console.log('hello');
-        
-        
-    // }
+    
   return (
     <>
     <div className="item-card">

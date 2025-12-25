@@ -235,7 +235,7 @@ input{
     background-color: rgb(55, 52, 55);
     padding: 20px;
     box-sizing: border-box;
-    /* padding: 10px; */
+    
     display: flex;
     justify-content: space-evenly;
     border-radius: 12px;
@@ -279,3 +279,163 @@ input{
 }
 
 
+
+@media (max-width: 560px) {
+
+   .cart-con {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .add-card {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 10px;
+        border-radius: 12px;
+    }
+
+    .img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .img img {
+        height: 60px;
+    }
+
+    .price {
+        margin-left: 0;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .btns {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+        margin: 0;
+    }
+
+    .qty {
+        font-size: 16px;
+        padding: 4px 10px;
+    }
+
+    input {
+        width: 60px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .remove {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .total > h2{
+        width: 95%;
+        text-align: center;
+        font-size: 18px;
+        padding: 15px 10px;
+        margin-top: 10px;
+        background-color: rgb(50, 47, 47);
+        border-radius: 12px;
+    }
+
+    body {
+        width: 100%;
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    .nav-con {
+        height: auto;
+    }
+
+    .navbar {
+        width: 92vw;
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 20px;
+    }
+
+    nav {
+        gap: 20px;
+        font-size: 16px;
+        flex-wrap: wrap;
+    }
+
+    .home-banner {
+        height: 450px;
+        position: relative;
+    }
+
+    .home-content {
+        position: absolute;
+        top: 320px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90vw;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .home-content h1 {
+        font-size: 22px;
+    }
+
+    .home-content h2 {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .home-content button {
+        font-size: 14px;
+        padding: 6px 16px;
+    }
+
+      .product-con {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .item-card {
+        width: 100%;
+        height: auto;
+        padding: 12px;
+    }
+
+    .item-img > img {
+        height: 90px;
+        padding: 10px;
+    }
+
+    .item-name h2 {
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .add-cart-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .btns {
+        margin: 0;
+    }
+
+    .cir {
+        text-align: center;
+        left: auto;
+        right: -30px;
+        top: 5px;
+    }
+}
